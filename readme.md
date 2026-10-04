@@ -189,8 +189,8 @@ void main() {
 }
 ```
 
-### Penjelasan Fungsional (Computational Thinking)
+### Penjelasan Fungsional 
 
-- **Abstraksi**: Meringkas kerumitan dengan `enum StatusPembayaran` untuk hasil pasti dan class `EWallet` sebagai satu cetakan identitas dan status dompet.
-- **Dekomposisi**: Menghindari satu fungsi besar yang memusingkan dengan memisahkan validasi (`cekPin`, `cekSaldo`, `cekLimit`). Mengganti aturan cukup di satu fungsi.
-- **Algoritma**: Alur `pembayaran()` diurutkan dengan logis dari blokir -> cek pin -> cek saldo -> cek limit -> eksekusi potong saldo. Fail fast (gagal lebih awal sebelum proses rumit).
+- **Abstraksi menurut saya**: Meringkas kerumitan dengan `enum StatusPembayaran` untuk hasil pasti dan class `EWallet` sebagai satu cetakan identitas dan status dompet.
+- **Dekomposisi menurut saya**: Menghindari satu fungsi besar yang memusingkan dengan memisahkan validasi (`cekPin`, `cekSaldo`, `cekLimit`). Mengganti aturan cukup di satu fungsi.
+- **Algoritma menurut saya**: Alur `pembayaran()` diurutkan dengan logis dari blokir -> cek pin -> cek saldo -> cek limit -> eksekusi potong saldo. Fail fast (gagal lebih awal sebelum proses rumit).
