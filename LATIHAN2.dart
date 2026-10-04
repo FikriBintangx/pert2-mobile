@@ -26,7 +26,6 @@ StatusPembayaran cekPin(
   EWallet akun,
   List<int> inputPin,
 ) {
-  // ponytail: Guard clause buat ngecek akun udah keblokir apa belum dari awal
   if (akun.percobaanPin >= 3) {
     return StatusPembayaran.akunTerblokir;
   }
@@ -148,15 +147,12 @@ void main() {
   );
   print('Saldo: Rp${akun1.saldo.toStringAsFixed(0)}');
 
-
   print('\n Skenario 2');
   print(
     tampilkanHasil(
       pembayaran(akun2, [5678], 1000000, limitHarian),
     ),
   );
-
-
 
   print('\n Skenario 3');
   print(
@@ -165,16 +161,12 @@ void main() {
     ),
   );
 
-
-
   print('\n Skenario 4');
   print(
     tampilkanHasil(
       pembayaran(akun4, [9999, 8888, 7777], 500000, limitHarian),
     ),
   );
-
-
 
   print('\n Skenario 5');
   print(
